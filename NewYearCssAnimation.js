@@ -2,7 +2,8 @@ import React from 'react'
 import './NewYearCssAnimation.css'
 
 const NewYearCssAnimation = () => {
-    const stars = () =>{
+    //it will trigger every time on page render
+    window.onload = () =>{
         const totalStars = 200;
         const targetDiv = document.querySelector('div');
 
@@ -24,7 +25,7 @@ const NewYearCssAnimation = () => {
             targetDiv.appendChild(creatingStars);
         }
     }
-    stars()
+    
     return (
         <div>
             <h2>Happy New Year <span>2021</span> </h2>
